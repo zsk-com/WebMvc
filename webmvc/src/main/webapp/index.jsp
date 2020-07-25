@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <html>
   <head>
-    <title></title>
+    <title>测试</title>
   </head>
     <body>
         <a href="demo/des.do?name=zzt&id=666">点击进入</a><br>

@@ -2,7 +2,7 @@ package com.zsk.servlet;
 
 import java.util.HashMap;
 
-public class ModelAndView {
+public class Model {
     //存requset
     private static HashMap<String,String> requsetmap=new HashMap();
 

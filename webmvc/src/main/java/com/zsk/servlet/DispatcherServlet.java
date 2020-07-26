@@ -207,7 +207,7 @@ public class DispatcherServlet extends HttpServlet {
     //转发 重定向
     private void setReqResp(HttpServletRequest requset) {
         //创建对象
-        ModelAndView view = new ModelAndView();
+        Model view = new Model();
         //处理requset存值
         HashMap<String, String> requsetmap = view.getRequsetAll();
         Iterator<String> it1 = requsetmap.keySet().iterator();

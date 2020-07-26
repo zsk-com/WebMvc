@@ -182,3 +182,29 @@ scanPackage=Mymvc.conntroller
 ```
 
 这样我们就可以访问该请求了
+## Model
+
+**该类用于保存数据（一次请求携带数据requset和一次会话session）**
+
+**方法**
+
+**setRequsetAttribute(key,value)**
+
+**setsessionAttribute(key，value)**
+
+````java
+@RequestMapping("/demo")
+public class DemoController {
+    @ResponseBody
+    @RequestMapping("/des.do")
+    public String demo(){
+        ModelAndView model=new ModelAndView();
+        model.setRequsetAttribute("key","value");//一次请求
+        model.setsessionAttribute("key","value");//一次会话
+        return "success";
+    }
+}
+
+````
+
+

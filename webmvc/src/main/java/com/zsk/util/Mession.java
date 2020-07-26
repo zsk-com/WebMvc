@@ -1,4 +1,4 @@
-package Mymvc.util;
+package com.zsk.util;
 import com.google.gson.Gson;
 
 public class Mession {

@@ -52,7 +52,7 @@ DispatcherServlet--统一请求处理类
     <!--只拦截controller请求-->
         <servlet>
             <servlet-name>mvc</servlet-name>
-            <servlet-class>Mymvc.servlet.DispatcherServlet</servlet-class>
+            <servlet-class>com.zsk.servlet.DispatcherServlet</servlet-class>
         </servlet>
         <servlet-mapping>
             <servlet-name>mvc</servlet-name>
@@ -135,10 +135,10 @@ public String demo2(){
 #### 3.编写Application.properties
 
 ```java
-TestController=Mymvc.conntroller.TestController
+TestController=com.zsk.conntroller.TestController
     
 注：TestController表示类名
-    Mymvc.conntroller.TestController表示类全名
+    com.zsk.conntroller.TestController表示类全名
 ```
 
 这样我们就可以访问该请求了
@@ -177,10 +177,10 @@ public class DemoController {
 #### 3.编写Application.properties
 
 ```java
-scanPackage=Mymvc.conntroller
+scanPackage=com.zsk.conntroller
     
     scanPackage 用于查找配置扫描的包(是必须的)
-    Mymvc.conntroller  表示需要扫描的包(通常为控制层)
+    com.zsk.conntroller  表示需要扫描的包(通常为控制层)
 ```
 
 这样我们就可以访问该请求了

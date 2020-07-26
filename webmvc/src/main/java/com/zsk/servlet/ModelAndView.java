@@ -1,4 +1,4 @@
-package Mymvc.servlet;
+package com.zsk.servlet;
 
 import java.util.HashMap;
 

@@ -1,8 +1,8 @@
-package Mymvc.conntroller;
+package com.zsk.conntroller;
 
-import Mymvc.annotation.RequestMapping;
-import Mymvc.annotation.ResponseBody;
-import Mymvc.servlet.ModelAndView;
+import com.zsk.annotation.RequestMapping;
+import com.zsk.annotation.ResponseBody;
+import com.zsk.servlet.ModelAndView;
 
 @RequestMapping("/demo")
 public class DemoController {

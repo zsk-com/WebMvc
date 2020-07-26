@@ -1,4 +1,4 @@
-package Mymvc.annotation;
+package com.zsk.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

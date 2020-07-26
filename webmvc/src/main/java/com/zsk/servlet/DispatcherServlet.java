@@ -1,9 +1,9 @@
-package Mymvc.servlet;
+package com.zsk.servlet;
 
-import Mymvc.annotation.RequestMapping;
-import Mymvc.annotation.ResponseBody;
-import Mymvc.annotation.Param;
-import Mymvc.util.Mession;
+import com.zsk.annotation.RequestMapping;
+import com.zsk.annotation.ResponseBody;
+import com.zsk.annotation.Param;
+import com.zsk.util.Mession;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

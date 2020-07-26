@@ -8,8 +8,6 @@ public class ModelAndView {
 
     //存response
     private static HashMap<String,String> sessionmap=new HashMap();
-    //存json数据
-//    private static HashMap<String,Object> jsonmap=new HashMap<>();
 
     //给用户用
     //requset
@@ -34,12 +32,4 @@ public class ModelAndView {
         return this.sessionmap;
     }
 
-//    //json
-//    public void addJSON(String key,Object obj){
-//        jsonmap.put(key,obj);
-//    }
-//
-//    Object setJSON(){
-//        return jsonmap;
-//    }
 }

@@ -2,12 +2,15 @@
 
 ### 项目描述
 
-​			基于Servlet进行封装的web框架,可有效减少控制层的类的个数,可更高效进行开发。
-核心逻辑：WebMvc/webmvc/src/main/java/com/zsk/servlet/DispatcherServlet.java 
+​		      基于Servlet进行封装的web框架,可有效减少控制层的类的个数,可更高效进行开发。
+                     
 
 ### 优点
 
 ​           传统Servlet一个请求对应一个类,现可实现多个功能对应一个类。可帮助我们快速开发
+## 项目核心
+  核心逻辑在该类：WebMvc/webmvc/src/main/java/com/zsk/servlet/DispatcherServlet.java ，所有的请求都会到达该类下的service方法，由该类进行分发请求.
+  
 
 ## 环境搭建
 

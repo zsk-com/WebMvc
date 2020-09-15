@@ -26,7 +26,6 @@
 ​			该项目在我学完JavaEE和学了SpringMVC框架后，为了加强自己的基础和能更深入解框架的本质，自己实现了框架的常用功能，该框架其目的是效减少控制层的类的个数及配置文件的冗余,可帮助程序员更高效进行开发。
 
 ### 项目核心
->>>>>>> origin/master
 
  核心逻辑在该类：WebMvc/webmvc/src/main/java/com/zsk/servlet/**DispatcherServlet**.java ，所有的请求都会   到达该类下的**service**方法，由该类进行分发请求。想深入理解的同学可以看该类下的源码哦
 

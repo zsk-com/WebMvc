@@ -236,7 +236,7 @@ public class DispatcherServlet extends HttpServlet {
         }
     }
     //扫描注解RequsetMapping
-    public void ScanAnnction() {
+    private void ScanAnnction() {
         //获取需要扫描的包
         String scanPackage = inputMap.get("scanPackage");
         if (scanPackage != null) {//证明需要分析
@@ -303,7 +303,7 @@ public class DispatcherServlet extends HttpServlet {
 
     }
 
-    public void disposeRespones(Method method, Object type, HttpServletResponse response, HttpServletRequest request) throws Exception {
+    private void disposeRespones(Method method, Object type, HttpServletResponse response, HttpServletRequest request) throws Exception {
         if (type != null) {
             if (type instanceof String) {
                 //8.反回值中拆分看是以什么方式响应 welco.jsp/redirect 重定向  /forw转发     不带/ json格式

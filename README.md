@@ -1,14 +1,42 @@
 # WebMvc
 
+### 为什么封装？
+
+**原生Servlet的浏览器---服务器请求响应过程**
+	1.发送请求(资源)
+	2.接收请求信息(资源名字 请求参数)
+	3.解析请求(拆分资源名)
+	4.参考web.xml配置文件( 请求---类名的关系) 
+	5.找寻真正请求的资源(Servlet类)
+	6.Servlet类做为控制类(接收请求 调用业务方法 根据业务结果给予响应)
+	7.接收响应信息
+	8.响应信息解析并展示
+
+**原生Servlet的问题**：控制层的Servlet类个数好多，在控制层需要继承Servlet并重写service/doPost doGet方法，以及每个请求需要配置8行xml,很多冗余的问题
+	
+
+**封装需要解决的问题**：
+	最主要的目的**降低配置文件的冗余**
+	**减少Controller类的个数**
+		一个功能点对应一个类(原生Servlet)
+		一个功能点对应一个类中的某一个方法(封装之后)
+
 ### 项目描述
 
+<<<<<<< HEAD
 
 ​			基于Servlet进行封装的web框架,可有效减少控制层的类的个数,可更高效进行开发。
+=======
+​			该项目在我学完JavaEE和学了SpringMVC框架后，为了加强自己的基础和能更深入解框架的本质，自己实现了框架的常用功能，该框架其目的是效减少控制层的类的个数及配置文件的冗余,可帮助程序员更高效进行开发。
 
-### 优点
+### 项目核心
+>>>>>>> origin/master
 
-​           传统Servlet一个请求对应一个类,现可实现多个功能对应一个类。可帮助我们快速开发
+ 核心逻辑在该类：WebMvc/webmvc/src/main/java/com/zsk/servlet/**DispatcherServlet**.java ，所有的请求都会   到达该类下的**service**方法，由该类进行分发请求。想深入理解的同学可以看该类下的源码哦
 
+**项目结构**
+
+![QQ截图20200915222058](C:\Users\Lenovo\Desktop\操作系统\图片\QQ截图20200915222058.png)
 ## 环境搭建
 
 ### 	1.引入依懒
@@ -183,3 +211,29 @@ scanPackage=Mymvc.conntroller
 ```
 
 这样我们就可以访问该请求了
+## Model
+
+**该类用于保存数据（一次请求携带数据requset和一次会话session）**
+
+**方法**
+
+**setRequsetAttribute(key,value)**
+
+**setsessionAttribute(key，value)**
+
+````java
+@RequestMapping("/demo")
+public class DemoController {
+    @ResponseBody
+    @RequestMapping("/des.do")
+    public String demo(){
+        ModelAndView model=new ModelAndView();
+        model.setRequsetAttribute("key","value");//一次请求
+        model.setsessionAttribute("key","value");//一次会话
+        return "success";
+    }
+}
+
+````
+
+
